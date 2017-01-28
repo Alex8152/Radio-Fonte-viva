@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Splash screen Nóbile</title>
+<style>
+		.{
+	margin: 0;
+	padding: 0;
+
+}
+html, body{
+	width: 100%;
+	height: 100%;
+
+}
+
+div#nobile, header{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+}
+	</style>
+</head>
+<body>
+<header>
+	<video id="myvideo" autoplay="true">
+		<source src="video/splash.mp4" type="video/mp4">
+	</video>
+</header>
+
+
+<script>
+	var vid = document.getElementById("myvideo");
+	vid .onended = function(){
+	window.open("Pagina1.html","_self");
+	preload.style.animation = "fadeout 3s ease-in";
+};
+</script>
+</body>
+</html>
