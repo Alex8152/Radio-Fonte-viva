@@ -4,18 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Rádio Fonte Viva</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<!--Pacote offline do JQuery (coloque aqui o fim do comentario)
-	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
-	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
-	-->
-	<!--Pacote Online do JQuery mobile-->
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	
+	<!--Pacote Online do JQuery mobile
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	
-</head>
+	-->
+	</head>
 <body>
 	
 	<!--Início da ouvir-->
@@ -23,7 +22,7 @@
 
 		<audio id="myAudio">
 
- 			 <source src="audio/aud.mp3" type="audio/mpeg">
+ 			 <source src="audio/fraternidade.mp3" type="audio/mpeg">
   
 		</audio>
 		<button id="buttonoutro" onclick="loadAudio()"></button>
@@ -42,12 +41,10 @@
 		    	x.load(); 
 		}
 		</script>
-		
-
 		<div data-role="content" id="barra">
 			<a href="#" id="abre"><img src="img/dots.png"></a>
 			<a href="#painel" id="home"><img src="img/home.png"></a>
-			<a href="" id="radio" data-transition="flip"><img src="img/antena.png"></a>
+			<a href="#popuponline" data-rel="popup" id="radio" data-transition="flip"><img src="img/antena.png"></a>
 			<a href="#" id="face"><img src="img/facebook.png"></a>
 		
 			<a href="" id="app" data-transition="pop"><img src=""></a>
@@ -58,20 +55,32 @@
 				<header data-role="header">
 					
 				</header>
-				<ul>
-					<br>
-					<li><a href="#dialog3" data-transition="flip">Programação</a></li>
-					<br>
-					<li><a href="#pag3" data-transition="flip">Anuncie</a></li>
-					<br>
-					<li><a href="#pag2" data-transition="flip">Informações</a></li>
-					<br>
-					<li><a href="#dialog1" data-transition="flip">Contatos</a></li>
-					<br>
-					<a href="#" data-rel="close" data-transition="flip">Sair</a>
+				<ul data-role="listview" data-inset="true">
+				    <li data-icon="clock"><a href="#dialog3" data-transition="flip">Programação</a></li>
+				    <li data-icon="shop"><a href="#pag3" data-transition="flip">Anuncie</a></li>
+				    <li data-icon="info"><a href="#pag2" data-transition="flip">Informações</a></li>
+				    <li data-icon="mail"><a href="#dialog1" data-transition="flip">Contatos</a></li>
+				    <li data-icon="delete"><a href="#" id="saida" data-rel="close" data-transition="flip" >Sair</a></li>
 				</ul>
-				
+		</div>
+
+		<!--popup 1-->
+			<div data-role="popup" id="popuponline">
+				<h1>Seja bem vindo!</h1>
+				<h2>Você está ouvindo:</h2>
+				<p>A programação da rádio web Fonte Viva</p>
+				<br>
+				<br>
+				<br>
+			</div>
+		<!--Fim do popup 1-->		
+
 		</div>	
+		<!--Início do rodapé-->
+		<footer data-role="footer"  id="footer1" data-position="fixed">
+			<p><br>&#169 2017 Paróquia Nossa Senhora das Neves</p>
+		</footer>
+		<!--Fim do rodapé-->
 		
 	</div>
 
@@ -83,8 +92,7 @@
 			<!--Início do cabeçalho-->
 			<div>
 				<header data-role="header" data-position="fixed">
-					<h1 style="padding-bottom: 0px;">Fonte Viva</h1>
-					<h6>rádio web</h6>
+					<h1>Sobre</h1>
 
 				</header>
 			</div>
@@ -93,8 +101,8 @@
 			<!--Início da seção principal-->
 			<div data-role="content">
 			<img src="img/Pe.png" style="width: 100%; margin-top: 0px;">
-				<div data-role="collapsible-set">
-					<div data-role="collapsible">
+				<div data-role="collapsible-set" data-collapsed="false">
+					<div data-role="collapsible" data-collapsed="false">
 						<h3>Sobre a rádio.</h3>
 						<h3>O que faz a rádio?</h3>
 						<p>A Rádio web Fonte Viva está proposta a ser um dos canais de ligação entre a comunidade e a paróquia Nossa Senhora das Neves.</p>
@@ -105,7 +113,7 @@
 						<p>Solicite informações <a href="#dialog1" data-transition="flip">clicando aqui</a></p>
 					</div>
 
-					<div data-role="collapsible">
+					<div data-role="collapsible" data-collapsed="false">
 						<h3>Programação</h3>
 						<h3>Quem pode fazer parte da programação?</h3>
 						<p>Qualquer grupo pastoral ou pessoa que esteja ligada a uma das igrejas da paróquia Nossa Senhora das Neves</p>
@@ -117,7 +125,7 @@
 						<p>Toda a programação será avaliada por uma comissão que levará em consideração a disponibilidade de horário e a estruturação antes de qualquer aprovação.</p>
 					</div>
 
-					<div data-role="collapsible">
+					<div data-role="collapsible" data-collapsed="false">
 						<h3>Aplicativo</h3>
 						<h3>Sobre</h3>
 						<ul>
@@ -148,8 +156,7 @@
 			<!--Início do cabeçalho-->
 			<div>
 				<header data-role="header" data-position="fixed">
-					<h1 style="padding-bottom: 0px;">Fonte viva</h1>
-					<h6>rádio web</h6>
+				<h1>Anuncios</h1>
 				</header>
 			</div>
 			<!--Fim do cabeçalho-->
@@ -161,19 +168,19 @@
 				<p>Você pode anunciar durante a programação da rádio web Fonte Viva.</p>
 				<p>Anunciando sua marca ou comunicado a toda comunidade Bivar Olinto, Vila teimosa, Campo cumprido, Geralda Medeiros, Geraldo Carvalho</p>
 				<!--Começo do menu acordion-->
-				<div data-role="collapsible-set">
-					<div data-role="collapsible">
+				<div data-role="collapsible-set" data-collapsed="false">
+					<div data-role="collapsible" data-collapsed="false">
 				 		<h3>Anuncie na rádio</h3>
 				 		<p>Anuncie <a href="#dialog2" data-transition="flip">Clicando aqui</a> e preenchendo os dados no formulário</p>
 					
 					</div>
-					<div data-role="collapsible">
+					<div data-role="collapsible" data-collapsed="false">
 				 		<h3>Secretaria da paróquia</h3>
 				 		<p>Você pode solicitar seu anúncio através de contato com a secretaria pelos numeros:</p>
 				 		<p>(83)99871-4981 /</p>
 					
 					</div>
-					<div data-role="collapsible">
+					<div data-role="collapsible" data-collapsed="false">
 				 		<h3>Pascom-Pastoral da comunicação</h3>
 				 		<p>Se preferir pode entrar em contato com a pascom pelos contatos:</p>
 				 		
@@ -182,7 +189,7 @@
 					</div>
 				</div>
 				<!--Fim do menu acordion-->
-				<a href="#pag1" data-role="button">Voltar</a>
+				<a href="#pag1" data-role="button" data-transition="flip">Voltar</a>
 			</div>
 			<!--Fim da seção principal-->
 
@@ -210,10 +217,9 @@
 			<!--Início da seção principal-->
 			<div data-role="content">
 				<form>
-					<input type="text" name="Nome" value="Nome">
-					<input type="text" name="Nome" value="Celular">
-					<label for="textarea-4" class="ui-hidden-accessible">Escreva aqui:</label>
-					<textarea cols="40" rows="8" name="textarea-4" id="textarea-4">Escreva aqui</textarea>
+					<input type="text" name="Nome" id="nome"  placeholder="Digite seu nome" value="">
+					<input type="text" name="Celular"  placeholder="Número do seu celular" value="">
+					<textarea cols="40" rows="8" name="textarea-4" id="textarea-4" placeholder="Aqui sua mensagem"></textarea>
 					<label for="select-multiple-4" class="ui-hidden-accessible">Custom multiple select:</label>
 					<select multiple="multiple" data-native-menu="false" name="select-multiple-4" id="select-multiple-4">
    					    <option value="">Escolha:</option>
@@ -243,15 +249,15 @@
 			<!--Início da seção principal-->
 			<div data-role="content">
 				<form>
-					<input type="text" name="nome" value="Escreva seu nome">
-					<input type="text" name="celular" value="Seu numero de contato">
+					<input type="text" name="nome"  placeholder="Digite seu nome" value="">
+					<input type="text" name="celular" value=""  placeholder="Número de celuar/whatsaap" >
 					<label for="textarea-4" class="ui-hidden-accessible">O que quer anunciar?:</label>
-					<textarea cols="40" rows="8" name="textarea-4" id="textarea-4">O que deseja anunciar?</textarea>
+					<textarea cols="40" rows="8" name="textarea-4" id="textarea-4"  placeholder="Sobre o anúncio." ></textarea>
 					<label for="select-multiple-4" class="ui-hidden-accessible">Custom multiple select:</label>
 					<select multiple="multiple" data-native-menu="false" name="select-multiple-4" id="select-multiple-4">
-	   					 <option value="">Tipo de anuncio</option>
-	   					 <option value="small">Para produto/Marca</option>
-	    				 <option value="medium">Comércio</option>
+	   					 <option value="">Tipo:</option>
+	   					 <option value="small">Seu produto/Marca</option>
+	    				 <option value="medium">Seu Comércio</option>
 	    				 <option value="large">Convite Missa</option>
 					</select>
 
@@ -265,7 +271,7 @@
 		</div>
 		<!--Fim da caixa de dialogo 2-->
 
-		<!--Caixa de dialogo Metodo 3-->
+	<!--Caixa de dialogo Metodo 3-->
 	<div data-role="page" id="dialog3" data-dialog="true" data-close-btn="none" data-corners="false" data-theme="a">
 
 			<!--Início do cabeçalho-->
@@ -274,10 +280,10 @@
 			</header>
 			
 				<a href="#pag1" data-transition="flip" data-role="button" data-rel="back" data-corners="false" data-shadow="false">Voltar</a> <!-- Cria o botão cancelar da cx de dialogo-->
-			</div>
-			<!--Fim da seção principal-->
+	</div>
+	<!--Fim do dialog3-->
 
-		<div data-role="page"  id="diretrizes" data-theme="a">
+	<div data-role="page"  id="diretrizes" data-theme="a">
 		<div data-role="content" data-position="inline">
 			<div data-role="header">
 				<h1>Importante!</h1>

@@ -33,7 +33,7 @@ div#pag1{
 
 #barra{
 	margin-left: 300px;
-	margin-top: 300px;
+	margin-top: 40px;
 	width: 100%;
   height: 40px; /* quanto a imagem cresce pra baixo*/
   border-radius: 50px;
@@ -70,7 +70,7 @@ div#pag1{
 }
 
 #buttonoutro{
-  top: 340px;
+  top: 75px;
   left: 180px;
   width: 15px;
   height: 15px;
@@ -87,7 +87,7 @@ div#pag1{
 }
 
 #buttonplay{
-  top: 270px;
+  margin-top: 260px;
   left: 120px;
   width: 100px;
   height: 100px;
@@ -100,7 +100,7 @@ div#pag1{
   outline: none;
   color: #fff;
   background-color: transparent;
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.6);
   border-radius: 50%;
 }
 #buttonplay:active{
@@ -143,6 +143,13 @@ div#barra a#radio{
    
 }
 
+div#barra a#face{
+    position: relative;
+    margin-left: 40px;
+    padding: 10px; 
+   
+}
+
 div#painel header{
   width: 100%;
   height: 80px;
@@ -157,5 +164,36 @@ div#painel ul{
 div#painel a{
   font-size: 20px;
   text-decoration: none;
+  color: #85847a;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: #fff;
+  box-shadow: none;
+  border-bottom: 2px solid #9d8d8d;
+}
+div#painel a#saida{
+  font-size: 20px;
+  text-decoration: none;
+  color: #85847a;
+  border: none;
+  background-color: #fff;
+  box-shadow: none;
+}
 
+div#popuponline{
+ background-color: rgba(255,255,255,0.8);
+ border-radius: 30px;
+}
+
+#footer1{
+  background-color: transparent;
+  border-top: none;
+}
+
+#footer1 p{
+  text-align: center;
+  color: #fff;
+  font-family: arial;
+  text-shadow: none;
 }
